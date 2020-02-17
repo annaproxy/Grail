@@ -238,6 +238,7 @@ start :-
 	new_output_file(grail_log, log),
 	default_image,
 	open_main_window,
+    current_prolog_flag(argv, Argv),
 	open_stats_window,
 	process_arguments(Argv),
 	get_option(gv, GV),
