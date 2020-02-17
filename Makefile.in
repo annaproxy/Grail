@@ -31,7 +31,7 @@ package_version = @PACKAGE_VERSION@
 grail_year = @GRAIL_YEAR@
 
 rel_date := $(shell date +"%e %B %Y (%H:%M:%S %Z)" | tr -s " " | sed 's/^[ ]//g')
-swi_version := $(shell swipl -v)
+swi_version := $(shell swipl --version)
 
 # perform substitutions explicitly
 edit = @SED@ \
