@@ -39,7 +39,7 @@
 :- set_prolog_flag(verbose, silent).
 
 :- initialization(main, program).
-
+main :- start.
 % = directory where the xpce images are stored.
 
 :- pce_image_directory('@graildatadir@').
