@@ -1,4 +1,4 @@
-#!@SWIPL@ -q -g start -f
+#!@SWIPL@
 % -*- Mode: Prolog -*-
 % =====================
 % =    Grail 3.2.0    =
@@ -36,6 +36,9 @@
 %   works with UTF-8 by default and LaTeX with fontenc set to UTF-8)
 
 :- set_prolog_flag(encoding, utf8).
+:- set_prolog_flag(verbose, silent).
+
+:- initialization(main, program).
 
 % = directory where the xpce images are stored.
 
@@ -235,7 +238,6 @@ start :-
 	new_output_file(grail_log, log),
 	default_image,
 	open_main_window,
-	current_prolog_flag(argv, [_|Argv]),
 	open_stats_window,
 	process_arguments(Argv),
 	get_option(gv, GV),

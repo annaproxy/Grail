@@ -38,7 +38,7 @@
 :- use_module(tree234,   [btree_get/3]).
 :- use_module(options,   [get_option/2,option_true/1]).
 
-dynamic short_axioms/0.
+:- dynamic short_axioms/0.
 
 short_axioms.
 
